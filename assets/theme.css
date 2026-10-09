@@ -1,0 +1,209 @@
+
+.theme-toggle {
+  position: fixed;
+  top: 18px;
+  right: 22px;
+  z-index: 50;
+  padding: 9px 13px;
+  border: 1px solid #40556c;
+  border-radius: 7px;
+  background: #142236;
+  color: #b7eff7;
+  font: 500 13px 'Satoshi', Tahoma, sans-serif;
+  cursor: pointer;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --page: #f5f3ee;
+  --panel: #f5f3ee;
+  --water: #a9d3e8;
+}
+
+[data-theme="light"] body,
+[data-theme="light"] .projects-page {
+  background: #f5f3ee;
+  color: #25374b;
+}
+
+[data-theme="light"] .title,
+[data-theme="light"] .intro .name,
+[data-theme="light"] .space-button {
+  color: #172c42;
+}
+
+[data-theme="light"] .intro p {
+  color: #5b6d7e;
+}
+
+[data-theme="light"] .space-button svg {
+  stroke: #253f57;
+}
+
+[data-theme="light"] .space-button:hover {
+  background: #dceaf1;
+  border-color: #aac4d5;
+}
+
+[data-theme="light"] .desktop-window,
+[data-theme="light"] .desktop-window.window-active,
+[data-theme="light"] .showcase-card,
+[data-theme="light"] .course-card,
+[data-theme="light"] .showcase-lightbox {
+  background: #fffefa;
+  color: #25374b;
+  border-color: #94aabc;
+  box-shadow: 0 7px 0 #25374b10, 0 16px 45px #25374b20;
+}
+
+[data-theme="light"] .desktop-window-header,
+[data-theme="light"] .window-active .desktop-window-header {
+  background: #e7edf0;
+  color: #25374b;
+  border-color: #94aabc;
+}
+
+[data-theme="light"] .desktop-window-body p,
+[data-theme="light"] .desktop-window-body .skill-list,
+[data-theme="light"] .about-work-list,
+[data-theme="light"] .projects-content .project p {
+  color: #475c6e;
+}
+
+[data-theme="light"] .desktop-window-body h3,
+[data-theme="light"] .about-details h4,
+[data-theme="light"] .desktop-window-body a,
+[data-theme="light"] .projects-content a,
+[data-theme="light"] .projects-content h3,
+[data-theme="light"] .desktop-window[data-window-key="about"] .about-identity .about-thai,
+[data-theme="light"] .showcase-lightbox button {
+  color: #176080;
+}
+
+[data-theme="light"] .period,
+[data-theme="light"] .project .role,
+[data-theme="light"] .credits {
+  color: #516b7d;
+}
+
+[data-theme="light"] .about-profile,
+[data-theme="light"] .desktop-window-body .project,
+[data-theme="light"] .coursework-list li {
+  border-color: #b9cbd5;
+}
+
+[data-theme="light"] .about-details,
+[data-theme="light"] .desktop-window-body {
+  scrollbar-color: #8eb1c5 #e7edf0;
+}
+
+[data-theme="light"] .showcase-placeholder {
+  background: #dcecf4;
+  color: #176080;
+}
+
+[data-theme="light"] .showcase-placeholder span {
+  color: #475c6e;
+}
+
+[data-theme="light"] .showcase-image-link {
+  background: #e7edf0;
+}
+
+[data-theme="light"] .motion-toggle {
+  color: #253f57;
+}
+
+[data-theme="light"] .theme-toggle {
+  background: #fffefa;
+  color: #25374b;
+  border-color: #94aabc;
+}
+
+[data-theme="light"] #sky {
+  opacity: 0.15;
+}
+
+@media (max-width: 600px) {
+  .theme-toggle {
+    top: 12px;
+    right: 12px;
+  }
+}
+
+[data-theme="light"] {
+  --page: #e5f0f6;
+  --panel: #e5f0f6;
+}
+
+[data-theme="light"] .space {
+  background: #171716;
+}
+
+#day-clouds {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+[data-theme="light"] #day-clouds {
+  opacity: 1;
+}
+
+[data-theme="light"] #sky {
+  opacity: 0;
+}
+
+.space {
+  background: #171716;
+}
+
+.space::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, #c4e1f2 0%, #d4eaf6 55%, #e8f3fa 100%);
+  opacity: 0;
+}
+
+[data-theme="light"] .space::before {
+  opacity: 1;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 2;
+}
+
+.theme-toggle:disabled {
+  cursor: wait;
+}
+
+
+::view-transition-group(root) {
+  animation: none;
+}
+
+::view-transition-image-pair(root) {
+  isolation: isolate;
+}
+
+.water .wave path {
+  fill: var(--water);
+}

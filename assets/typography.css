@@ -1,0 +1,123 @@
+@import url('theme.css?v=45');
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(vendor/roboto-mono-400.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(vendor/roboto-mono-500.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(vendor/roboto-mono-700.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Zen Kaku Gothic New';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(vendor/zen-kaku-gothic-new-400.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Zen Kaku Gothic New';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(vendor/zen-kaku-gothic-new-500.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Zen Kaku Gothic New';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(vendor/zen-kaku-gothic-new-700.ttf) format('truetype');
+}
+
+.desktop-window,
+.desktop-window *,
+.projects-page,
+.projects-page *,
+.coursework-page,
+.coursework-page * {
+  font-family: 'Zen Kaku Gothic New', Tahoma, sans-serif;
+}
+
+.desktop-window-header h2,
+.desktop-window-close {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.desktop-window-body {
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.desktop-window-body h3,
+.projects-content h1,
+.projects-content h3 {
+  font-weight: 700;
+}
+
+.desktop-window-header h2 {
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+.desktop-window-body h3,
+.projects-content h3 {
+  font-size: clamp(25px, 2.6vw, 30px);
+  line-height: 1.25;
+}
+
+.desktop-window[data-window-key="about"] .about-identity h3 {
+  font-size: clamp(30px, 3.5vw, 42px);
+}
+
+.projects-content h1,
+.coursework-page h1 {
+  font-size: clamp(32px, 4vw, 44px);
+  line-height: 1.2;
+}
+
+.coursework-page h2 {
+  font-size: 28px;
+}
+
+.coursework-page h3 {
+  font-size: 24px;
+}
+
+.about-details h4 {
+  font-size: clamp(25px, 2.6vw, 30px);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .desktop-window-header h2 {
+    font-size: 19px;
+  }
+}
+
+.desktop-window[data-window-key="about"] .about-identity .about-thai {
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.5;
+  font-weight: 500;
+  color: #b7eff7;
+  margin-bottom: 10px;
+}
