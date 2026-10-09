@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script src="assets/vendor/theme.js?v=45"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Siravich Chevayont - game developer and designer.">
+    <title>Siravich’s Personal Space</title>
+    <link rel="preconnect" href="https://api.fontshare.com">
+    <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&amp;display=swap">
+    <link rel="stylesheet" href="style.css?v=44">
+    <script type="module" src="assets/vendor/portfolio-stars.js?v=45"></script>
+    <script src="script.js?v=44" defer></script>
+    <script type="module" src="waves.js?v=44"></script>
+    <script type="module" src="assets/vendor/portfolio-controls.js?v=44"></script>
+      <link rel="stylesheet" href="assets/typography.css?v=45">
+      <script src="assets/vendor/button-sounds.js?v=44" defer></script>
+  </head>
+  <body>
+    <main class="space" aria-label="Siravich’s portfolio">
+      <div id="sky" aria-hidden="true"></div>
+      <canvas id="day-clouds" aria-hidden="true"></canvas>
+      <h1 class="title" aria-label="Personal Space">
+        <span class="title-line" data-scramble="PERSONAL" aria-hidden="true">PERSONAL</span>
+        <span class="title-line" data-scramble="SPACE//" aria-hidden="true">SPACE//</span>
+      </h1>
+      <div class="intro">
+        <p class="name">Hi, I’m Siravich!</p>
+        <p>Game developer, designer & creative collaborator.</p>
+      </div>
+      <nav class="space-menu" aria-label="Explore my portfolio">
+        <button class="space-button" data-open="about">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 22v-3a8 8 0 0 1 16 0v3"/></svg>
+          <span>About</span>
+        </button>
+        <button class="space-button" data-open="work">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 6a2 2 0 0 1 2-2h6l2 3h8a2 2 0 0 1 2 2v11H2Z"/></svg>
+          <span>Projects</span>
+        </button>
+        <button class="space-button" data-open="skills">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="3"/><path d="M8 7V3h8v4M2 13h20"/></svg>
+          <span>Skills & Experience</span>
+        </button>
+        <button class="space-button" data-open="coursework">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c-3-2-7-2-10-1v16c3-1 7-1 10 1 3-2 7-2 10-1V4c-3-1-7-1-10 1Z M12 5v16"/></svg>
+          <span>Coursework</span>
+        </button>
+        <button class="space-button" data-open="contact">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="15" rx="3"/><path d="m2 6 10 8L22 6"/></svg>
+          <span>Contact</span>
+        </button>
+      </nav>
+      <div class="water" aria-hidden="true">
+        <div id="wave-root"></div>
+      </div>
+      <button class="motion-toggle" type="button" aria-pressed="false">Pause water</button>
+    </main>
+
+    <div id="desktop-windows"></div>
+
+    <template id="about" data-title="About">
+      <div class="about-profile">
+        <img class="about-avatar" src="assets/profile.png" alt="Siravich’s illustrated profile picture" width="144" height="144">
+        <div class="about-identity">
+          <h3>Siravich Chevayont</h3>
+          <p class="about-thai" lang="th">สิรวิชญ์ ชีวายนต์</p>
+          <p>Game developer, designer &amp; creative collaborator.</p>
+          <p>Media Technology student at KMUTT</p>
+        </div>
+      </div>
+      <div class="about-details">
+        <p>Hi, I’m Siravich. I work across game development, design and creative production. I...</p>
+        <ul class="about-work-list">
+          <li>create gameplay scripts and game systems,</li>
+          <li>design game mechanics and experiences,</li>
+          <li>plan projects and support creative teams, and</li>
+          <li>build and manage online communities.</li>
+        </ul>
+        <div class="about-contact">
+          <p>Interested in working together?</p>
+          <button class="contact-action" type="button" data-contact-open>Contact me</button>
+        </div>
+        <h4>Education</h4>
+        <p>King Mongkut’s University of Technology Thonburi<br>School of Architecture and Design<br>Media Technology, Game Development</p>
+        <p class="period">2024-Present</p>
+        <h4>Hobby</h4>
+        <ul class="about-work-list">
+          <li>I love playing action and survival games, especially third-person and first-person shooters (TPS/FPS).</li>
+          <li>I enjoy creating games, with a particular interest in indie game development.</li>
+          <li>I also love watching movies and TV series in my free time.</li>
+        </ul>
+      </div>
+    </template>
+
+    <template id="work" data-title="Projects">
+      <p class="panel-intro">A selection of Roblox projects and my role in each.</p>
+      <p><a href="project.html">Open the standalone projects page ↗</a></p>
+        <div class="showcase-grid">
+<article class="project showcase-card">
+          <a class="showcase-image-link" href="assets/image1.png" data-image-preview="ST: Blockade Battlefront">
+            <img class="showcase-image" src="assets/image1.png" alt="ST: Blockade Battlefront screenshot from my CV" loading="lazy">
+            <span class="image-hint">View full image</span>
+          </a>
+          <div class="showcase-copy">
+          <span class="period">2026-Present</span>
+          <h3>ST: Blockade Battlefront</h3>
+          <p class="role">Commissioned Scripter</p>
+          <p>Commissioned development of three characters for a Roblox action game inspired by Skibidi Toilet.</p>
+        
+          </div>
+        </article>
+        <article class="project showcase-card">
+          <div class="showcase-placeholder">Starbound<br><span>Project in development</span></div>
+          <div class="showcase-copy">
+          <span class="period">2026-Present</span>
+          <h3>Starbound</h3>
+          <p class="role">Junior Scripter</p>
+          <p>An action battleground project in development, inspired by JoJo’s Bizarre Adventure.</p>
+        
+          </div>
+        </article>
+        <article class="project showcase-card">
+          <a class="showcase-image-link" href="assets/image6.png" data-image-preview="Stand Rumble">
+            <img class="showcase-image" src="assets/image6.png" alt="Stand Rumble screenshot from my CV" loading="lazy">
+            <span class="image-hint">View full image</span>
+          </a>
+          <div class="showcase-copy">
+          <span class="period">2026-Present</span>
+          <h3>Stand Rumble</h3>
+          <p class="role">Game Designer · QA · Junior Developer</p>
+          <p>Game design, quality assurance and general development for a Roblox action battleground.</p>
+        
+          </div>
+        </article>
+        <article class="project showcase-card">
+          <a class="showcase-image-link" href="assets/image4.png" data-image-preview="Stellar Project">
+            <img class="showcase-image" src="assets/image4.png" alt="Stellar Project screenshot from my CV" loading="lazy">
+            <span class="image-hint">View full image</span>
+          </a>
+          <div class="showcase-copy">
+          <span class="period">2026-Present</span>
+          <h3>Stellar Project</h3>
+          <p class="role">Project Manager · Game Designer · Lead Scripter</p>
+          <p>An action RPG in development, inspired by Made in Abyss and Japanese role-playing games.</p>
+        
+          </div>
+        </article>
+        <article class="project showcase-card">
+          <a class="showcase-image-link" href="assets/image7.png" data-image-preview="Brick Blast">
+            <img class="showcase-image" src="assets/image7.png" alt="Brick Blast screenshot from my CV" loading="lazy">
+            <span class="image-hint">View full image</span>
+          </a>
+          <div class="showcase-copy">
+          <span class="period">2024-2025</span>
+          <h3>Brick Blast</h3>
+          <p class="role">Project Manager · Gameplay &amp; Systems Developer</p>
+          <p>An arcade action project in development, drawing on classic Roblox games from 2005-2010.</p>
+        
+          </div>
+        </article>
+        <article class="project showcase-card">
+          <a class="showcase-image-link" href="assets/image8.png" data-image-preview="Project Stair">
+            <img class="showcase-image" src="assets/image8.png" alt="Project Stair screenshot from my CV" loading="lazy">
+            <span class="image-hint">View full image</span>
+          </a>
+          <div class="showcase-copy">
+          <span class="period">2024-2025</span>
+          <h3>Project Stair</h3>
+          <p class="role">Project Manager · Creative</p>
+          <p>A survival horror project in development with an endless staircase, puzzles and supernatural threats, inspired by the SCP community.</p>
+        
+          </div>
+        </article>
+        <article class="project showcase-card">
+          <a class="showcase-image-link" href="assets/image3.png" data-image-preview="FLUSHDIVER">
+            <img class="showcase-image" src="assets/image3.png" alt="FLUSHDIVER screenshot from my CV" loading="lazy">
+            <span class="image-hint">View full image</span>
+          </a>
+          <div class="showcase-copy">
+          <span class="period">2023-2024</span>
+          <h3>FLUSHDIVER</h3>
+          <p class="role">Project Manager · Creative</p>
+          <p>A third-person action shooter project in development, with gameplay inspiration from Helldivers 1 and 2.</p>
+        
+          </div>
+        </article>
+        <article class="project showcase-card">
+          <a class="showcase-image-link" href="assets/image2.png" data-image-preview="Chaos Timeline">
+            <img class="showcase-image" src="assets/image2.png" alt="Chaos Timeline screenshot from my CV" loading="lazy">
+            <span class="image-hint">View full image</span>
+          </a>
+          <div class="showcase-copy">
+          <span class="period">2021-2022</span>
+          <h3>Chaos Timeline</h3>
+          <p class="role">Former Project Manager · Commissioned Contributor</p>
+          <p>An action experience featuring combat and powers inspired by JoJo’s Bizarre Adventure and other series.</p>
+        
+          </div>
+        </article>
+        <article class="project showcase-card">
+          <a class="showcase-image-link" href="assets/image5.png" data-image-preview="Sakura Stand">
+            <img class="showcase-image" src="assets/image5.png" alt="Sakura Stand screenshot from my CV" loading="lazy">
+            <span class="image-hint">View full image</span>
+          </a>
+          <div class="showcase-copy">
+          <span class="period">2019-2023</span>
+          <h3>Sakura Stand</h3>
+          <p class="role">Project Manager · Creative Director · Community Manager</p>
+          <p>Creative direction, project management and community work for a Roblox action experience.</p>
+        
+          </div>
+        </article>
+      </div>
+    </template>
+
+    <template id="skills" data-title="Skills & Experience">
+      <h3>Skills</h3>
+      <ul class="skill-list">
+        <li>Unity & Roblox Studio</li>
+        <li>Game mechanics, narrative & balancing</li>
+        <li>Gameplay scripting & quality assurance</li>
+        <li>Basic 3D modeling & animation</li>
+        <li>Project planning & production management</li>
+        <li>Discord infrastructure & community security</li>
+      </ul>
+      <ul class="skill-tools" aria-label="Tools I use">
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+            <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" />
+          </svg>
+          <span>Discord</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+            <path d="M12.51 13.214c.046-.8.438-1.506 1.03-2.006a3.424 3.424 0 0 1 2.212-.79c.85 0 1.631.3 2.211.79.592.5.983 1.206 1.028 2.005.045.823-.285 1.586-.865 2.153a3.389 3.389 0 0 1-2.374.938 3.393 3.393 0 0 1-2.376-.938c-.58-.567-.91-1.33-.865-2.152M7.35 14.831c.006.314.106.922.256 1.398a7.372 7.372 0 0 0 1.593 2.757 8.227 8.227 0 0 0 2.787 2.001 8.947 8.947 0 0 0 3.66.76 8.964 8.964 0 0 0 3.657-.772 8.285 8.285 0 0 0 2.785-2.01 7.428 7.428 0 0 0 1.592-2.762 6.964 6.964 0 0 0 .25-3.074 7.123 7.123 0 0 0-1.016-2.779 7.764 7.764 0 0 0-1.852-2.043h.002L13.566 2.55l-.02-.015c-.492-.378-1.319-.376-1.86.002-.547.382-.609 1.015-.123 1.415l-.001.001 3.126 2.543-9.53.01h-.013c-.788.001-1.545.518-1.695 1.172-.154.665.38 1.217 1.2 1.22V8.9l4.83-.01-8.62 6.617-.034.025c-.813.622-1.075 1.658-.563 2.313.52.667 1.625.668 2.447.004L7.414 14s-.069.52-.063.831zm12.09 1.741c-.97.988-2.326 1.548-3.795 1.55-1.47.004-2.827-.552-3.797-1.538a4.51 4.51 0 0 1-1.036-1.622 4.282 4.282 0 0 1 .282-3.519 4.702 4.702 0 0 1 1.153-1.371c.942-.768 2.141-1.183 3.396-1.185 1.256-.002 2.455.41 3.398 1.175.48.391.87.854 1.152 1.367a4.28 4.28 0 0 1 .522 1.706 4.236 4.236 0 0 1-.239 1.811 4.54 4.54 0 0 1-1.035 1.626" />
+          </svg>
+          <span>Blender</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+            <path d="m12.9288 4.2939 3.7997 2.1929c.1366.077.1415.2905 0 .3675l-4.515 2.6076a.4192.4192 0 0 1-.4246 0L7.274 6.8543c-.139-.0745-.1415-.293 0-.3675l3.7972-2.193V0L1.3758 5.5977V16.793l3.7177-2.1456v-4.3858c-.0025-.1565.1813-.2682.318-.1838l4.5148 2.6076a.4252.4252 0 0 1 .2136.3676v5.2127c.0025.1565-.1813.2682-.3179.1838l-3.7996-2.1929-3.7178 2.1457L12 24l9.6954-5.5977-3.7178-2.1457-3.7996 2.1929c-.1341.082-.3229-.0248-.3179-.1838V13.053c0-.1565.087-.2956.2136-.3676l4.5149-2.6076c.134-.082.3228.0224.3179.1838v4.3858l3.7177 2.1456V5.5977L12.9288 0Z" />
+          </svg>
+          <span>Unity</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+            <path d="M18.926 23.998 0 18.892 5.075.002 24 5.108ZM15.348 10.09l-5.282-1.453-1.414 5.273 5.282 1.453z" />
+          </svg>
+          <span>Roblox</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+            <path d="M21.147 0H2.853A2.86 2.86 0 000 2.853v18.294A2.86 2.86 0 002.853 24h18.294A2.86 2.86 0 0024 21.147V2.853A2.86 2.86 0 0021.147 0zM10.34 17.287a.953.953 0 01-.953.953h-4a.954.954 0 01-.954-.953V5.38a.953.953 0 01.954-.953h4a.954.954 0 01.953.953zm9.233-5.467a.944.944 0 01-.953.947h-4a.947.947 0 01-.953-.947V5.38a.953.953 0 01.953-.953h4a.954.954 0 01.953.953z" />
+          </svg>
+          <span>Trello</span>
+        </li>
+      </ul>
+      <h3>Experience</h3>
+      <p>I’ve worked across game development and creative production since 2019, including creative direction and community management for Sakura Stand, and development roles on several Roblox projects.</p>
+      <p>My community management experience includes supporting a Discord server with more than 100k members in the single server.</p>
+    </template>
+
+    <template id="contact" data-title="Contact">
+      <h3>Let’s talk.</h3>
+      <p>For game development, design and project enquiries:</p>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:siravichchevayont@gmail.com">
+          <svg class="contact-logo" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M3 5h2l7 5 7-5h2v14h-4V9l-5 4-5-4v10H3z" />
+          </svg>
+          <span>
+            <strong>Gmail</strong>
+            <span>siravichchevayont@gmail.com</span>
+          </span>
+        </a>
+        <a class="contact-link" href="https://www.instagram.com/morning.moshi/" target="_blank" rel="noopener noreferrer">
+          <svg class="contact-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+          </svg>
+          <span>
+            <strong>Instagram</strong>
+            <span>@morning.moshi</span>
+          </span>
+        </a>
+        <a class="contact-link" href="https://github.com/mddict" target="_blank" rel="noopener noreferrer">
+          <svg class="contact-logo" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.14c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.71 1.25 3.37.95.1-.74.4-1.25.74-1.54-2.57-.29-5.27-1.28-5.27-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.16 1.18A11 11 0 0 1 12 6.17c.98 0 1.96.13 2.88.39 2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.28 5.68.42.36.79 1.07.79 2.16v3.17c0 .31.21.67.79.56A11.5 11.5 0 0 0 12 .7z" />
+          </svg>
+          <span>
+            <strong>GitHub</strong>
+            <span>mddict</span>
+          </span>
+        </a>
+      </div>
+      <details class="credits">
+        <summary>References & credits</summary>
+        <p>Tool logos: <a href="https://github.com/simple-icons/simple-icons" target="_blank" rel="noopener">Simple Icons</a> (CC0).</p>
+        <p>Profile and projects: CV supplied by Siravich Chevayont.</p>
+        <p>Interaction inspiration: <a href="https://www.sharyap.com/" target="_blank" rel="noopener">Sharlene Yap’s personal website</a>.</p>
+        <p>Daytime clouds: <a href="https://github.com/paradise-runner/background-clouds" target="_blank" rel="noopener">background-clouds by paradise-runner</a>, MIT licensed. Adapted with softly shaded cloud layers for the portfolio’s pale blue sky.</p>
+        <p>Theme reveal: adapted from <a href="https://animate-ui.com/docs/primitives/effects/theme-toggler" target="_blank" rel="noopener">Animate UI Theme Toggler</a>.</p>
+        <p>Menu buttons: <a href="https://animate-ui.com/docs/primitives/buttons/button" target="_blank" rel="noopener">Animate UI Button</a>, adapted for this portfolio.</p>
+        <p>Stars: <a href="https://animate-ui.com/docs/components/backgrounds/stars" target="_blank" rel="noopener">Animate UI Stars Background</a>, adapted for the portfolio palette and plain CSS.</p>
+        <p>Water: <a href="https://github.com/woofers/react-wavify" target="_blank" rel="noopener">react-wavify</a>, MIT licensed. Code prepared with Codex assistance.</p>
+      </details>
+    </template>
+    <template id="coursework" data-title="MDT312 Assignments">
+      <h3>MDT312 Assignments</h3>
+      <p>Weeks 3-7</p>
+      <div class="showcase-grid coursework-showcase">
+        <article class="course-card">
+          <div class="course-preview" aria-hidden="true">
+            <iframe src="WeeklyAssignment/W3/main.html" title="Cinnamon Rolls page preview" loading="lazy" tabindex="-1"></iframe>
+          </div>
+          <div class="showcase-copy">
+            <span class="period">Week 3 Assignment</span>
+            <h3>Cinnamon Rolls</h3>
+            <a href="WeeklyAssignment/W3/main.html" data-assignment="Cinnamon Rolls">Open assignment ↗</a>
+          </div>
+        </article>
+        <article class="course-card">
+          <div class="course-preview" aria-hidden="true">
+            <iframe src="WeeklyAssignment/W4/recipe.html" title="Pizza Dip page preview" loading="lazy" tabindex="-1"></iframe>
+          </div>
+          <div class="showcase-copy">
+            <span class="period">Week 4 Assignment</span>
+            <h3>Pizza Dip</h3>
+            <a href="WeeklyAssignment/W4/recipe.html" data-assignment="Pizza Dip">Open assignment ↗</a>
+          </div>
+        </article>
+        <article class="course-card">
+          <div class="course-preview" aria-hidden="true">
+            <iframe src="WeeklyAssignment/W5/JS-1/index.html" title="Blog / Forum page preview" loading="lazy" tabindex="-1"></iframe>
+          </div>
+          <div class="showcase-copy">
+            <span class="period">Week 5 Assignment</span>
+            <h3>Blog / Forum</h3>
+            <a href="WeeklyAssignment/W5/JS-1/index.html" data-assignment="Blog / Forum">Open assignment ↗</a>
+          </div>
+        </article>
+        <article class="course-card">
+          <div class="course-preview" aria-hidden="true">
+            <iframe src="WeeklyAssignment/W6/Assignment/register.html" title="Register & Login page preview" loading="lazy" tabindex="-1"></iframe>
+          </div>
+          <div class="showcase-copy">
+            <span class="period">Week 6 Assignment</span>
+            <h3>Register & Login</h3>
+            <a href="WeeklyAssignment/W6/Assignment/register.html" data-assignment="Register & Login">Open assignment ↗</a>
+          </div>
+        </article>
+        <article class="course-card">
+          <div class="course-preview" aria-hidden="true">
+            <iframe src="WeeklyAssignment/W7/assignment7/assignment7/index.html" title="Square Game page preview" loading="lazy" tabindex="-1"></iframe>
+          </div>
+          <div class="showcase-copy">
+            <span class="period">Week 7 Assignment</span>
+            <h3>Square Game</h3>
+            <a href="WeeklyAssignment/W7/assignment7/assignment7/index.html" data-assignment="Square Game">Open assignment ↗</a>
+          </div>
+        </article>
+      </div>
+    </template>
+  </body>
+</html>
