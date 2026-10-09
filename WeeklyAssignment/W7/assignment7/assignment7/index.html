@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <script src="../../../../assets/vendor/theme.js?v=45"></script>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Square game</title>
+		<script type="text/javascript" src="game.js"></script>
+		<link rel="stylesheet" type="text/css" href="game.css">
+	    <link rel="stylesheet" href="../../../../assets/typography.css?v=45">
+      <script src="../../../../assets/vendor/button-sounds.js?v=36" defer></script>
+  </head>
+	<body class="coursework-page">
+
+		<fieldset>
+			<legend>Control</legend>
+			<label for="numbox">Number of box: </label>
+			<input type="text" name="numbox" id="numbox" placeholder="e.g. 10">
+			<select name="color" id="color">
+				<option value="maroon">Maroon</option>
+				<option value="lightgreen">Lightgreen</option>
+				<option value="magenta">Magenta</option>
+			</select>
+			<button id="start">Start</button>
+			<div id="timerClock"> Timer:
+				<div id="clock"></div>
+			</div>
+		</fieldset>
+
+		<div id="container">
+			<div id="layer"></div>
+		</div>
+	
+	</body>
+</html>
